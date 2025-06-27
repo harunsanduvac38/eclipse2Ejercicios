@@ -16,8 +16,8 @@ public class Ej07 {
 		
 		for (int i = 1; i<= numDigit; i++) {
 			
-			sumDigit += Math.pow(num3%10,numDigit);
-			num3 = num%10;
+			sumDigit += Math.pow((num3%10),numDigit);
+			num3 /=10;
 		}
 		
 		if(sumDigit == num) {
@@ -25,12 +25,15 @@ public class Ej07 {
 		}else {
 			return false;
 		}
+		
+		
 	}
 	
 	
 	
 	public static void main(String[] args) {
 		System.out.println(numArmstrong(371));
+		System.out.println(numArmstrong(4_210_818));
 		
 	}
 }
